@@ -30,6 +30,16 @@
       "type": "belongsTo",
       "model": "Profile",
       "foreignKey": "profileId"
+    },
+    "Category": {
+      "type": "belongsTo",
+      "model": "Categiry",
+      "foreignKey": "categoryId"
+    },
+    "PostImage": {
+      "type": "hasMany",
+      "model": "PostImage",
+      "foreignKey": ""
     }
   },
   "acls": [
@@ -43,6 +53,12 @@
       "accessType": "WRITE",
       "principalType": "ROLE",
       "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "editor",
       "permission": "ALLOW"
     }
   ],
